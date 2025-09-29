@@ -1,0 +1,173 @@
+/* ---------- Global ---------- */
+:root {
+    --primary: #4b6cb7;
+    --secondary: #182848;
+    --bg-light: #f5f7fa;
+    --text-dark: #333;
+    --accent: #ffb400;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+    background: var(--bg-light);
+    color: var(--text-dark);
+  }
+  
+  /* ---------- Header ---------- */
+  header {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  nav a {
+    margin: 0 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+  }
+  
+  nav a:hover {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+  }
+  
+  /* ---------- Sections ---------- */
+  section {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  section h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: var(--accent);
+    display: block;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+  }
+  
+  /* ---------- Projects ---------- */
+  .project {
+    background: #fff;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  
+  .project h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .project a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .project a:hover {
+    color: var(--accent);
+  }
+  
+  .project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+  
+  /* ---------- Skills ---------- */
+  #skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+  }
+  
+  #skills li {
+    background: #fff;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  #skills li:hover {
+    background: var(--accent);
+    color: #fff;
+    transform: scale(1.05);
+  }
+  
+  /* ---------- Contact ---------- */
+  #contact p a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  #contact p a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+  
+  /* ---------- Footer ---------- */
+  footer {
+    background: var(--secondary);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+  }
+  
+  /* ---------- Responsive ---------- */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2rem;
+    }
+    nav a {
+      display: inline-block;
+      margin: 0.5rem;
+    }
+  }
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Add padding so sections are not hidden behind sticky header */
+  section {
+    scroll-margin-top: 100px; /* adjust based on your header height */
+  }
+  nav a.active {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+  }      
